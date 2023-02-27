@@ -13,9 +13,18 @@ This function takes an array of integers `smallest_num` and its size `size` as i
 To use these functions, include the appropriate function definition in your code, and call the function with the appropriate arguments. For example:
 
 ```c
-int array[] = { 1, 2, 3, 4, 5 };
-int max_val = maxi(array, 5);
-int min_val = minx(array, 5);
+int main() {
+    int nums[] = {3, 7, 2, 8, 1, 5, 4, 9, 6};
+    int size = sizeof(nums) / sizeof(int);
+
+    int max = maxi(nums, size);
+    int min = minx(nums, size);
+
+    printf("The maximum value in the array is: %d\n", max);
+    printf("The minimum value in the array is: %d\n", min);
+
+    return 0;
+}
 ```
 This would set max_val to 5 and min_val to 1.
 
@@ -41,13 +50,17 @@ and a step size, it generates an array of integers containing the values in the 
 A pointer to an array of integers containing the values in the range.
 ### example
 ```c
-int length;
-int* r = rangex(0, 10, 2, &length);  // r = [0, 2, 4, 6, 8]
-int i;
-for (i = 0; i < length; i++) {
-    printf("%d ", r[i]);
+int main() {
+    int length;
+    int* r = range(0, 1000, 5, &length);  // r = [0, 2, 4, 6, 8]
+    int i;
+    for (i = 0; i < length; i++) {
+        printf("%d ", r[i]);
+    }
+    free(r);
+
+    return 0;
 }
-free(r);
 
 ```
 Note that the implementation assumes that the input values are valid, so you may want to add additional error checking code to handle edge cases. Also, remember to free the memory allocated by the function using free() when you're done with it.
