@@ -1,4 +1,4 @@
-## minx() max() Functions
+# minx() max() Functions
 
 #### `int maxi(int *high_number, int size)`
 
@@ -19,7 +19,7 @@ int min_val = minx(array, 5);
 ```
 This would set max_val to 5 and min_val to 1.
 
-## Rangex Function 
+# Rangex Function 
 
 This C function provides similar functionality to the `range()` built-in function in Python. Given a starting value, an ending value (exclusive), 
 and a step size, it generates an array of integers containing the values in the range.
