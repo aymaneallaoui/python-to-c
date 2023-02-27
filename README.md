@@ -1,14 +1,14 @@
 ## minx() max() Functions
 
-### `int maxi(int *high_number, int size)`
+#### `int maxi(int *high_number, int size)`
 
 This function takes an array of integers `high_number` and its size `size` as input parameters. It returns the maximum value of the elements in the array.
 
-### `int minx(int *smallest_num, int size)`
+#### `int minx(int *smallest_num, int size)`
 
 This function takes an array of integers `smallest_num` and its size `size` as input parameters. It returns the minimum value of the elements in the array.
 
-## Usage
+### Usage
 
 To use these functions, include the appropriate function definition in your code, and call the function with the appropriate arguments. For example:
 
