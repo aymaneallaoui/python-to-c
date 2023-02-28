@@ -52,7 +52,7 @@ A pointer to an array of integers containing the values in the range.
 ```c
 int main() {
     int length;
-    int* r = range(0, 1000, 5, &length);  // r = [0, 2, 4, 6, 8]
+    int* r = range(0, 1000, 5, &length);  
     int i;
     for (i = 0; i < length; i++) {
         printf("%d ", r[i]);
@@ -90,8 +90,6 @@ Here is an example program that uses the sum() function to calculate the sum of 
 ```c
 #include <stdio.h>
 
-int sum(int *arr, int size);
-
 int main() {
     int numbers[] = {1, 2, 3, 4, 5};
     int n = sizeof(numbers) / sizeof(numbers[0]);
@@ -100,13 +98,6 @@ int main() {
     return 0;
 }
 
-int sum(int *arr, int size) {
-    int total = 0;
-    for (int i = 0; i < size; i++) {
-        total += *(arr + i);
-    }
-    return total;
-}
 
 ```
 
@@ -123,15 +114,6 @@ The `len()` function can be called by passing a character array or string as its
 
 ```c
 #include <stdio.h>
-
-int len(char *arr) {
-    int length = 0;
-    while (*arr != '\0') {
-        length++;
-        arr++;
-    }
-    return length;
-}
 
 int main() {
     char str[] = "Hello, world!";
