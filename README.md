@@ -30,11 +30,11 @@ This would set max_val to 9 and min_val to 1.
 
 # Rangex Function 
 
-This C function provides similar functionality to the `range()` built-in function in Python. Given a starting value, an ending value (exclusive), 
+This C function provides similar functionality to the `rangex()` built-in function in Python. Given a starting value, an ending value (exclusive), 
 and a step size, it generates an array of integers containing the values in the range.
 
 ## Function Signature
-```int* range(int start, int stop, int step, int* length);```
+```int* rangex(int start, int stop, int step, int* length);```
 
 #### Parameters
 
@@ -52,7 +52,7 @@ A pointer to an array of integers containing the values in the range.
 ```c
 int main() {
     int length;
-    int* r = range(0, 1000, 5, &length);  
+    int* r = rangex(0, 1000, 5, &length);  
     int i;
     for (i = 0; i < length; i++) {
         printf("%d ", r[i]);
@@ -67,7 +67,7 @@ Note that the implementation assumes that the input values are valid, so you may
 
 # Sumx() Function in C
 
-This is a simple example of a function in C that calculates the sum of an array of integers. The function `sum()`
+This is a simple example of a function in C that calculates the sum of an array of integers. The function `sumx()`
 takes a pointer to the first element of an array and the size of the array as parameters, 
 and returns the sum of the elements in the array.
 
@@ -76,7 +76,7 @@ and returns the sum of the elements in the array.
 The function signature is as follows:
 
 ```c
-int sum(int *arr, int size);
+int sumx(int *arr, int size);
 ```
 
 where:
@@ -85,7 +85,7 @@ where:
 
 `size`: size of the array
 ## Example usage
-Here is an example program that uses the sum() function to calculate the sum of an array of integers:
+Here is an example program that uses the sumx() function to calculate the sum of an array of integers:
 
 ```c
 #include <stdio.h>
@@ -93,7 +93,7 @@ Here is an example program that uses the sum() function to calculate the sum of 
 int main() {
     int numbers[] = {1, 2, 3, 4, 5};
     int n = sizeof(numbers) / sizeof(numbers[0]);
-    int total = sum(numbers, n);
+    int total = sumx(numbers, n);
     printf("The sum is %d\n", total);
     return 0;
 }
@@ -101,23 +101,23 @@ int main() {
 
 ```
 
-The program declares an array of integers `numbers`, and calculates its size using the `sizeof` operator. It then calls the `sum()` function with the array and its size as arguments, and assigns the result to the variable `total`. Finally, it prints the total sum using `printf()`.
+The program declares an array of integers `numbers`, and calculates its size using the `sizeof` operator. It then calls the `sumx()` function with the array and its size as arguments, and assigns the result to the variable `total`. Finally, it prints the total sum using `printf()`.
 
 
 # lenx() Function
 
-The `len()` function is a simple C function that returns the length of a given character array or string. It operates similar to the `len()` function in Python, which returns the number of items in a sequence.
+The `lenx()` function is a simple C function that returns the length of a given character array or string. It operates similar to the `lenx()` function in Python, which returns the number of items in a sequence.
 
 ## Usage
 
-The `len()` function can be called by passing a character array or string as its argument:
+The `lenx()` function can be called by passing a character array or string as its argument:
 
 ```c
 #include <stdio.h>
 
 int main() {
     char str[] = "Hello, world!";
-    int length = len(str);
+    int length = lenx(str);
     printf("Length of '%s' is %d\n", str, length);
     return 0;
 }
@@ -127,6 +127,53 @@ This code will output:
 ```
 Length of 'Hello, world!' is 13
 ```
+
+# The mapx() Function
+
+The `map()` function is a built-in function in Python that applies a given function to each element of an iterable object (such as a list or tuple) and returns a new iterable object with the results.
+
+In C programming language, there is no built-in `mapx()` function. However, you can define your own `mapx()` function using function pointers.
+
+The `mapx()` function in the provided C code takes three arguments:
+
+A function pointer `fptr` that takes an `int` and returns an int. This function will be applied to each element of the array.
+
+An array of `ints` `arr`.
+
+An integer `size` that specifies the `size` of the array.
+
+The `mapx()` function returns a new array of `ints` with the result of applying the function `fptr` to each element of the input array `arr`.
+
+## Example
+
+Here's an example of how to use the `map()` function in C:
+
+```C
+int square(int n) {
+    return n * n;
+}
+
+int main() {
+    
+    int numbers[] = {1, 2, 3};
+    
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    
+    int* squares = map(square,numbers,size);
+    for (int i = 0; i < size; i++) {
+        printf("%d ", squares[i]);
+    }
+    printf("\n");
+    free(squares);
+}
+```
+In this example, we define a `square()` function that calculates the square of an integer. We then create an array of integers and pass it to the `map()` function along with the `square()` function. The `map()` function applies the `square()` function to each element of the array and returns a new array with the results. We print the new array and free the memory allocated for it.
+
+The output of the program should be:
+```
+1 4 9
+```
+This is the result of applying the `square()` function to each element of the `numbers` array.
 
 
 
