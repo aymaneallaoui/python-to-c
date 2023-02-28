@@ -177,5 +177,5 @@ This is the result of applying the `square()` function to each element of the `n
 
 
 
-## Contributing
+# Contributing
 If you find any issues with these functions or would like to suggest improvements, please feel free to submit an issue or pull request.
