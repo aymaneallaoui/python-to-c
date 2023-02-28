@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int main() {
-    int length;
-    int* r = rangex(0, 10, 2, &length);  // r = [0, 2, 4, 6, 8]
+int main()
+{
+    int lengthw;
+    int *r = rangex(0, 10, 2, &lengthw); // r = [0, 2, 4, 6, 8]
     int i;
-    for (i = 0; i < length; i++) {
-        printf("%d ", r[i]);
+    for (i = 0; i < lengthw; i++)
+    {
+        printf("The range is : %d\n ", r[i]);
     }
     free(r);
 
@@ -22,6 +23,25 @@ int main() {
     printf("The minimum value in the array is: %d\n", min);
 
     return 0;
+    char str[] = "Hello, world!";
+    int length = len(str);
+    printf("Length of '%s' is %d\n", str, length);
+    return 0;
 }
+
+// int testmap()
+// {
+
+//     int numbers[] = {1, 2, 3};
+
+//     int size = sizeof(numbers) / sizeof(numbers[0]);
+
+//     int *squares = map(square, numbers, size);
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%d ", squares[i]);
+//     }
+//     printf("\n");
+// }
 
 

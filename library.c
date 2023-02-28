@@ -48,3 +48,31 @@ int sumx(int *arr, int size) {
     }
     return total;
 }
+
+typedef int (*func_ptr)(int);
+
+
+int square(int n) {
+    return n * n;
+}
+
+// Define a function that mimics map() in Python
+int* mapx(func_ptr fptr, int* arr, int size) {
+    
+    int* result = malloc(size * sizeof(int));
+    
+    for (int i = 0; i < size; i++) {
+        result[i] = fptr(arr[i]);
+    }
+    
+    return result;
+}
+
+int lenx(char *arr) {
+    int length = 0;
+    while (*arr != '\0') {
+        length++;
+        arr++;
+    }
+    return length;
+}

@@ -8,7 +8,7 @@ This function takes an array of integers `high_number` and its size `size` as in
 
 This function takes an array of integers `smallest_num` and its size `size` as input parameters. It returns the minimum value of the elements in the array.
 
-### Usage
+## Usage
 
 To use these functions, include the appropriate function definition in your code, and call the function with the appropriate arguments. For example:
 
@@ -33,7 +33,7 @@ This would set max_val to 9 and min_val to 1.
 This C function provides similar functionality to the `range()` built-in function in Python. Given a starting value, an ending value (exclusive), 
 and a step size, it generates an array of integers containing the values in the range.
 
-### Function Signature
+## Function Signature
 ```int* range(int start, int stop, int step, int* length);```
 
 #### Parameters
@@ -48,7 +48,7 @@ and a step size, it generates an array of integers containing the values in the 
 
 #### Return Value
 A pointer to an array of integers containing the values in the range.
-### example
+## example
 ```c
 int main() {
     int length;
@@ -71,7 +71,7 @@ This is a simple example of a function in C that calculates the sum of an array 
 takes a pointer to the first element of an array and the size of the array as parameters, 
 and returns the sum of the elements in the array.
 
-### Function signature
+## Function signature
 
 The function signature is as follows:
 
@@ -84,7 +84,7 @@ where:
 `arr`: pointer to the first element of an array of integers
 
 `size`: size of the array
-### Example usage
+## Example usage
 Here is an example program that uses the sum() function to calculate the sum of an array of integers:
 
 ```c
@@ -111,6 +111,41 @@ int sum(int *arr, int size) {
 ```
 
 The program declares an array of integers `numbers`, and calculates its size using the `sizeof` operator. It then calls the `sum()` function with the array and its size as arguments, and assigns the result to the variable `total`. Finally, it prints the total sum using `printf()`.
+
+
+# lenx() Function
+
+The `len()` function is a simple C function that returns the length of a given character array or string. It operates similar to the `len()` function in Python, which returns the number of items in a sequence.
+
+## Usage
+
+The `len()` function can be called by passing a character array or string as its argument:
+
+```c
+#include <stdio.h>
+
+int len(char *arr) {
+    int length = 0;
+    while (*arr != '\0') {
+        length++;
+        arr++;
+    }
+    return length;
+}
+
+int main() {
+    char str[] = "Hello, world!";
+    int length = len(str);
+    printf("Length of '%s' is %d\n", str, length);
+    return 0;
+}
+```
+This code will output:
+
+```
+Length of 'Hello, world!' is 13
+```
+
 
 
 ## Contributing
