@@ -65,5 +65,53 @@ int main() {
 ```
 Note that the implementation assumes that the input values are valid, so you may want to add additional error checking code to handle edge cases. Also, remember to free the memory allocated by the function using free() when you're done with it.
 
+# Sumx() Function in C
+
+This is a simple example of a function in C that calculates the sum of an array of integers. The function `sum()`
+takes a pointer to the first element of an array and the size of the array as parameters, 
+and returns the sum of the elements in the array.
+
+### Function signature
+
+The function signature is as follows:
+
+```c
+int sum(int *arr, int size);
+```
+
+where:
+
+`arr`: pointer to the first element of an array of integers
+
+`size`: size of the array
+### Example usage
+Here is an example program that uses the sum() function to calculate the sum of an array of integers:
+
+```c
+#include <stdio.h>
+
+int sum(int *arr, int size);
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5};
+    int n = sizeof(numbers) / sizeof(numbers[0]);
+    int total = sum(numbers, n);
+    printf("The sum is %d\n", total);
+    return 0;
+}
+
+int sum(int *arr, int size) {
+    int total = 0;
+    for (int i = 0; i < size; i++) {
+        total += *(arr + i);
+    }
+    return total;
+}
+
+```
+
+The program declares an array of integers `numbers`, and calculates its size using the `sizeof` operator. It then calls the `sum()` function with the array and its size as arguments, and assigns the result to the variable `total`. Finally, it prints the total sum using `printf()`.
+
+
 ## Contributing
 If you find any issues with these functions or would like to suggest improvements, please feel free to submit an issue or pull request.

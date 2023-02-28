@@ -23,20 +23,28 @@ int minx(int *smallest_num, int size) {
 
 
 int* rangex(int start, int stop, int step, int* length) {
-    // calculate the length of the resulting range
+
     *length = (stop - start) / step;
     if ((stop - start) % step != 0) {
         (*length)++;
     }
 
-    // allocate memory for the range
+
     int* result = (int*) malloc(*length * sizeof(int));
 
-    // fill the range with values
+
     int i;
     for (i = 0; i < *length; i++) {
         result[i] = start + i * step;
     }
 
     return result;
+}
+
+int sumx(int *arr, int size) {
+    int total = 0;
+    for (int i = 0; i < size; i++) {
+        total += *(arr + i);
+    }
+    return total;
 }
