@@ -12,5 +12,16 @@ int main() {
     }
     free(r);
 
+    int nums[] = {3, 7, 2, 8, 1, 5, 4, 9, 6};
+    int size = sizeof(nums) / sizeof(int);
+
+    int max = maxi(nums, size);
+    int min = minx(nums, size);
+
+    printf("The maximum value in the array is: %d\n", max);
+    printf("The minimum value in the array is: %d\n", min);
+
     return 0;
 }
+
+
