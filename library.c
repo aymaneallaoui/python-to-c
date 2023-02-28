@@ -22,7 +22,6 @@ int minx(int *smallest_num, int size) {
 }
 
 
-
 int* rangex(int start, int stop, int step, int* length) {
     // calculate the length of the resulting range
     *length = (stop - start) / step;
@@ -34,10 +33,9 @@ int* rangex(int start, int stop, int step, int* length) {
     int* result = (int*) malloc(*length * sizeof(int));
 
     // fill the range with values
-    int i, value = start;
+    int i;
     for (i = 0; i < *length; i++) {
-        result[i] = value;
-        value += step;
+        result[i] = start + i * step;
     }
 
     return result;

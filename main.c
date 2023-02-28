@@ -1,11 +1,16 @@
 #include "library.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 
 int main() {
-    int students_scores[] = {78, 95, 65, 98, 75, 36};
-    int size = sizeof(students_scores) / sizeof(int);
-    int max_score = maxi(students_scores, size);
-    printf("The maximum score is %d\n", max_score);
+    int length;
+    int* r = rangex(0, 10, 2, &length);  // r = [0, 2, 4, 6, 8]
+    int i;
+    for (i = 0; i < length; i++) {
+        printf("%d ", r[i]);
+    }
+    free(r);
+
     return 0;
 }
