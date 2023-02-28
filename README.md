@@ -26,7 +26,7 @@ int main() {
     return 0;
 }
 ```
-This would set max_val to 3 and min_val to 1.
+This would set max_val to 9 and min_val to 1.
 
 # Rangex Function 
 
