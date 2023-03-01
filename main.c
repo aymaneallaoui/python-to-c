@@ -2,17 +2,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printabb(int arr[], int n) {
-  for (int i = 0; i < n; i++) {
-    printf("%d ", arr[i]);
-  }
-  printf("\n");
+void printabb(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 }
-
 
 int main()
 {
-    //rangex text ////////////////////////////////////////////////////
+    // rangex text ////////////////////////////////////////////////////
     int lengthw;
     int *r = rangex(0, 10, 2, &lengthw); // r = [0, 2, 4, 6, 8]
     int i;
@@ -21,8 +22,8 @@ int main()
         printf("The range is : %d\n ", r[i]);
     }
     free(r);
-    
-    //minx() maxi() test ////////////////////////////////////////////////////
+
+    // minx() maxi() test ////////////////////////////////////////////////////
     int nums[] = {3, 7, 2, 8, 1, 5, 4, 9, 6};
     int size = sizeof(nums) / sizeof(int);
 
@@ -36,22 +37,15 @@ int main()
     int length = lenx(str);
     printf("Length of '%s' is %d\n", str, length);
 
-
-
     int arr[] = {1, 2, 3, 4, 5};
-    
-    
+
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    
     printf("Original array: \n");
     printabb(arr, n);
 
-    
     printf("Shuffled array: \n");
     shufflex(arr, n);
     printabb(arr, n);
     return 0;
 }
-
-

@@ -90,22 +90,23 @@ int lenx(char *arr)
     return length;
 }
 
-void swap(int *a, int *b) {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
+void shufflex(int arr[], int n)
+{
 
-void shufflex(int arr[], int n) {
-  
-  srand(time(NULL));
+    srand(time(NULL));
 
-  
-  for (int i = n - 1; i > 0; i--) {
-    
-    int j = rand() % (i + 1);
+    for (int i = n - 1; i > 0; i--)
+    {
 
-    swap(&arr[i], &arr[j]);
-  }
+        int j = rand() % (i + 1);
+
+        swap(&arr[i], &arr[j]);
+    }
 }
