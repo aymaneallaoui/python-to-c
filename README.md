@@ -1,5 +1,28 @@
 ![python-to-c](https://github.com/aymaneallaoui/python-to-c/blob/master/img/template.png )
 
+# what's [python-to-c](https://github.com/aymaneallaoui/python-to-c) ?:
+This project contains several functions that can be used for common operations in C programming. I named it python-to-c because most functions are inspired by Python. These functions can be used as building blocks for more complex programs in C.
+
+# how to use in my code ?:
+
+To use the functions in this project, you need to type the following line at the top of your program:
+```c
+#include "library.h"
+```
+Then you can use the desired function in your code. 
+
+# how to compile your programe:
+There are different ways to compile and run a C program depending on your operating system and the tools you have installed.
+
+One way is to use a command-line interface (CLI) such as Cygwin1 or GCC2. You can type the following command:
+```
+gcc -o [name of your program] library.c [name of your working file] 
+```
+This will compile your source code file (library.c) and generate an executable file ([name of your program]) that you can run.
+
+Another way is to use an integrated development environment (IDE) such as Visual Studio or CodeBlocks. An IDE provides a graphical user interface (GUI) that allows you to write, edit, debug and run your code more easily. Most IDEs have a built-in compiler that does the work for you when you press a button.
+
+
 
 
 # minx() max() Functions:
