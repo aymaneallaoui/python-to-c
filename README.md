@@ -22,6 +22,8 @@ This will compile your source code file (library.c) and generate an executable f
 
 Another way is to use an integrated development environment (IDE) such as Visual Studio or CodeBlocks. An IDE provides a graphical user interface (GUI) that allows you to write, edit, debug and run your code more easily. Most IDEs have a built-in compiler that does the work for you when you press a button.
 
+## important note:
+The ``main.c`` file served as a testing ground for my functions and was included solely as an illustrative example.
 
 
 
