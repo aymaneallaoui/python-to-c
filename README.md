@@ -1,4 +1,4 @@
-# minx() max() Functions
+# minx() max() Functions:
 
 #### `int maxi(int *high_number, int size)`
 
@@ -8,7 +8,7 @@ This function takes an array of integers `high_number` and its size `size` as in
 
 This function takes an array of integers `smallest_num` and its size `size` as input parameters. It returns the minimum value of the elements in the array.
 
-## Usage
+## Usage:
 
 To use these functions, include the appropriate function definition in your code, and call the function with the appropriate arguments. For example:
 
@@ -28,15 +28,15 @@ int main() {
 ```
 This would set max_val to 9 and min_val to 1.
 
-# Rangex Function 
+# Rangex Function:
 
 This C function provides similar functionality to the `rangex()` built-in function in Python. Given a starting value, an ending value (exclusive), 
 and a step size, it generates an array of integers containing the values in the range.
 
-## Function Signature
+## Function Signature:
 ```int* rangex(int start, int stop, int step, int* length);```
 
-#### Parameters
+#### Parameters:
 
 `start`: The starting value of the range.
 
@@ -46,9 +46,9 @@ and a step size, it generates an array of integers containing the values in the 
 
 `length` : A pointer to an integer that will be set to the length of the resulting range.
 
-#### Return Value
+#### Return Value:
 A pointer to an array of integers containing the values in the range.
-## example
+## example:
 ```c
 int main() {
     int length;
@@ -65,13 +65,13 @@ int main() {
 ```
 Note that the implementation assumes that the input values are valid, so you may want to add additional error checking code to handle edge cases. Also, remember to free the memory allocated by the function using free() when you're done with it.
 
-# Sumx() Function in C
+# Sumx() Function in C:
 
 This is a simple example of a function in C that calculates the sum of an array of integers. The function `sumx()`
 takes a pointer to the first element of an array and the size of the array as parameters, 
 and returns the sum of the elements in the array.
 
-## Function signature
+## Function signature:
 
 The function signature is as follows:
 
@@ -84,7 +84,7 @@ where:
 `arr`: pointer to the first element of an array of integers
 
 `size`: size of the array
-## Example usage
+## Example usage:
 Here is an example program that uses the sumx() function to calculate the sum of an array of integers:
 
 ```c
@@ -104,11 +104,11 @@ int main() {
 The program declares an array of integers `numbers`, and calculates its size using the `sizeof` operator. It then calls the `sumx()` function with the array and its size as arguments, and assigns the result to the variable `total`. Finally, it prints the total sum using `printf()`.
 
 
-# lenx() Function
+# lenx() Function:
 
 The `lenx()` function is a simple C function that returns the length of a given character array or string. It operates similar to the `lenx()` function in Python, which returns the number of items in a sequence.
 
-## Usage
+## Usage:
 
 The `lenx()` function can be called by passing a character array or string as its argument:
 
@@ -128,7 +128,7 @@ This code will output:
 Length of 'Hello, world!' is 13
 ```
 
-# The mapx() Function
+# The mapx() Function:
 
 The `map()` function is a built-in function in Python that applies a given function to each element of an iterable object (such as a list or tuple) and returns a new iterable object with the results.
 
@@ -144,7 +144,7 @@ An integer `size` that specifies the `size` of the array.
 
 The `mapx()` function returns a new array of `ints` with the result of applying the function `fptr` to each element of the input array `arr`.
 
-## Example
+## Example:
 
 Here's an example of how to use the `map()` function in C:
 
@@ -175,6 +175,48 @@ The output of the program should be:
 ```
 This is the result of applying the `square()` function to each element of the `numbers` array.
 
+# Shufflex() Function:
+
+The `shufflex()` function is a C language function that shuffles the elements of an array in a random order. This function uses the Fisher-Yates shuffle algorithm, which is an algorithm for generating a random permutation of a finite sequence.
+
+### How it Works:
+
+The `shufflex()` function takes two arguments: an array of integers and the number of elements in the array. It then initializes the random seed using the `srand()` function from the `time.h` library.
+
+Next, the function starts from the last element of the array and iterates backwards to the first element. For each iteration, it picks a random index between 0 and the current index, inclusive. It then swaps the element at the current index with the element at the randomly picked index using the `swap()` function.
+
+After all the iterations are complete, the array will be shuffled in a random order.
+
+## Example:
+
+To use the shufflex() function, you need to include the function in your C program and call it with an array of integers and the number of elements in the array. Here is an example code snippet:
+```C
+void printabb(int arr[], int n);
+
+int main() {
+  int arr[] = {1, 2, 3, 4, 5};
+  int n = sizeof(arr) / sizeof(arr[0]);
+
+  printf("Original array: \n");
+  printabb(arr, n);
+
+  printf("Shuffled array: \n");
+  shufflex(arr, n);
+  printabb(arr, n);
+
+  return 0;
+}
+```
+In this example, we first declare and initialize an array of integers called arr with the values 1, 2, 3, 4, and 5. We also declare an integer n that contains the number of elements in the array.
+
+Next, we print the original array using the printArray() function.
+
+Then, we call the shufflex() function to shuffle the array in a random order.
+
+Finally, we print the shuffled array using the printArray() function.
+
+#### important note
+During the process of creating the `shufflex()` function, I also created a `swap()` function that swaps two elements, and I included it in the library. if you want to use it 
 
 
 # Contributing

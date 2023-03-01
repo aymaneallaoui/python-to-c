@@ -2,8 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void printabb(int arr[], int n) {
+  for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\n");
+}
+
+
 int main()
 {
+    //rangex text ////////////////////////////////////////////////////
     int lengthw;
     int *r = rangex(0, 10, 2, &lengthw); // r = [0, 2, 4, 6, 8]
     int i;
@@ -12,7 +21,8 @@ int main()
         printf("The range is : %d\n ", r[i]);
     }
     free(r);
-
+    
+    //minx() maxi() test ////////////////////////////////////////////////////
     int nums[] = {3, 7, 2, 8, 1, 5, 4, 9, 6};
     int size = sizeof(nums) / sizeof(int);
 
@@ -22,26 +32,26 @@ int main()
     printf("The maximum value in the array is: %d\n", max);
     printf("The minimum value in the array is: %d\n", min);
 
-    return 0;
     char str[] = "Hello, world!";
-    int length = len(str);
+    int length = lenx(str);
     printf("Length of '%s' is %d\n", str, length);
+
+
+
+    int arr[] = {1, 2, 3, 4, 5};
+    
+    
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    
+    printf("Original array: \n");
+    printabb(arr, n);
+
+    
+    printf("Shuffled array: \n");
+    shufflex(arr, n);
+    printabb(arr, n);
     return 0;
 }
-
-// int testmap()
-// {
-
-//     int numbers[] = {1, 2, 3};
-
-//     int size = sizeof(numbers) / sizeof(numbers[0]);
-
-//     int *squares = map(square, numbers, size);
-//     for (int i = 0; i < size; i++)
-//     {
-//         printf("%d ", squares[i]);
-//     }
-//     printf("\n");
-// }
 
 

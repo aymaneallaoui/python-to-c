@@ -7,3 +7,5 @@ int square(int n);
 int* mapx(func_ptr fptr, int* arr, int size);
 int lenx(char *arr);
 int length = 0;
+void shufflex(int arr[], int n);
+void swap(int *a, int *b);
