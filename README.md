@@ -14,7 +14,7 @@ To use these functions, include the appropriate function definition in your code
 
 ```c
 int main() {
-    int nums[] = {3, 7, 2, 8, 1, 5, 4, 9, 6};
+    int nums[] = {3, 7, 2, 8, 1, 5, 4, 9, 6, 10};
     int size = sizeof(nums) / sizeof(int);
 
     int max = maxi(nums, size);
@@ -26,7 +26,8 @@ int main() {
     return 0;
 }
 ```
-This would set max_val to 9 and min_val to 1.
+This would set max_val to 10 and min_val to 1.
+when pasring arguments make sure it's an array data types
 
 # Rangex Function:
 
@@ -171,7 +172,7 @@ In this example, we define a `square()` function that calculates the square of a
 
 The output of the program should be:
 ```
-1 4 9
+1 4 5 9
 ```
 This is the result of applying the `square()` function to each element of the `numbers` array.
 
