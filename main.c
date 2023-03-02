@@ -15,7 +15,7 @@ int main()
 {
     // rangex text ////////////////////////////////////////////////////
     int lengthw;
-    int *r = rangex(0, 10, 2, &lengthw); // r = [0, 2, 4, 6, 8]
+    int *r = rangex(0, 10, 1, &lengthw); // r = [0, 2, 4, 6, 8]
     int i;
     for (i = 0; i < lengthw; i++)
     {
