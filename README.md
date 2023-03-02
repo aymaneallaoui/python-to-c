@@ -239,11 +239,11 @@ int main() {
 ```
 In this example, we first declare and initialize an array of integers called arr with the values 1, 2, 3, 4, and 5. We also declare an integer n that contains the number of elements in the array.
 
-Next, we print the original array using the printArray() function.
+Next, we print the original array using the printabb() function.
 
 Then, we call the shufflex() function to shuffle the array in a random order.
 
-Finally, we print the shuffled array using the printArray() function.
+Finally, we print the shuffled array using the printabb() function.
 
 #### important note
 During the process of creating the `shufflex()` function, I also created a `swap()` function that swaps two elements, and I included it in the library. if you want to use it 
