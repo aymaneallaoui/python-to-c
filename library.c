@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <ctype.h>
+#include <string.h>
 
 int maxi(int *high_number, int size)
 {
@@ -151,4 +152,31 @@ int reducex(binary_op f, int arr[], int size)
     }
 
     return result;
+}
+
+void replacex(char *str, const char *substr, const char *replacement)
+{
+    int substr_len = strlen(substr);
+    int replacement_len = strlen(replacement);
+    int i, j, k;
+
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (strstr(&str[i], substr) == &str[i])
+        {
+            for (j = 0, k = i; substr[j] != '\0'; j++, k++)
+            {
+                if (str[k] != substr[j])
+                {
+                    break;
+                }
+            }
+            if (substr[j] == '\0')
+            {
+                memmove(&str[i + replacement_len], &str[i + substr_len], strlen(&str[i + substr_len]) + 1);
+                memcpy(&str[i], replacement, replacement_len);
+                i += replacement_len - 1;
+            }
+        }
+    }
 }

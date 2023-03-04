@@ -301,7 +301,9 @@ int reducex(int (*f)(int, int), int arr[], int size);
 ```
 
 `f` is a pointer to the binary function.
+
 `arr` is a pointer to the input array.
+
 `size` is the size of the input array.
 
 ## Example
@@ -331,7 +333,35 @@ int main() {
 }
 ```
 
+# replacex()
 
+The `replacex()` function is a C function that replaces all occurrences of a given substring in a string with a replacement string. The function signature is as follows
+
+```c
+void replacex(char *str, const char *substr, const char *replacement);
+```
+
+`str`: a pointer to the string in which the replacement should be made
+
+`substr`: a pointer to the substring to be replaced
+
+`replacement`: a pointer to the replacement string
+
+## example
+
+```c
+int main() {
+    char str[] = "lazy dog abb kick .";
+    char substr[] = "abb";
+    char replacement[] = "cat";
+
+    printf("Before replacing: %s\n", str);
+    replacex(str, substr, replacement);
+    printf("After replacing: %s\n", str);
+
+    return 0;
+}
+```
 
 # Contributing
 

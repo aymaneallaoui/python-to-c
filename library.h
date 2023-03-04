@@ -11,3 +11,4 @@ void shufflex(int arr[], int n);
 void swap(int *a, int *b);
 void titlex(char *str);
 int reducex(binary_op f, int arr[], int size);
+void replacex(char *str, const char *substr, const char *replacement);
