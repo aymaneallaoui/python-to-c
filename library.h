@@ -9,3 +9,4 @@ int lenx(char *arr);
 int length = 0;
 void shufflex(int arr[], int n);
 void swap(int *a, int *b);
+void titlex(char *str);

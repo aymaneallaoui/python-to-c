@@ -47,5 +47,10 @@ int main()
     printf("Shuffled array: \n");
     shufflex(arr, n);
     printabb(arr, n);
+
+    char str[] = "hello world";
+    titlex(str);
+    printf("%s\n", str);
+
     return 0;
 }

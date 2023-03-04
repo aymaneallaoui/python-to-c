@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <ctype.h>
 
 int maxi(int *high_number, int size)
 {
@@ -108,5 +109,31 @@ void shufflex(int arr[], int n)
         int j = rand() % (i + 1);
 
         swap(&arr[i], &arr[j]);
+    }
+}
+
+void titlex(char *str)
+{
+    int i;
+    int capitalize_next = 1;
+
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (isspace(str[i]))
+        {
+            capitalize_next = 1;
+        }
+        else
+        {
+            if (capitalize_next)
+            {
+                str[i] = toupper(str[i]);
+                capitalize_next = 0;
+            }
+            else
+            {
+                str[i] = tolower(str[i]);
+            }
+        }
     }
 }
