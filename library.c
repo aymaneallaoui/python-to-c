@@ -49,7 +49,7 @@ int *rangex(int start, int stop, int step, int *length)
     return result;
 }
 
-int sumx(int *arr, int size)
+int sexyx(int *arr, int size)
 {
     int total = 0;
     for (int i = 0; i < size; i++)
@@ -136,4 +136,19 @@ void titlex(char *str)
             }
         }
     }
+}
+
+typedef int (*binary_op)(int, int);
+
+int reducex(binary_op f, int arr[], int size)
+{
+    int i;
+    int result = arr[0];
+
+    for (i = 1; i < size; i++)
+    {
+        result = f(result, arr[i]);
+    }
+
+    return result;
 }

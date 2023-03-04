@@ -1,12 +1,13 @@
 int maxi(int *high_number, int size);
 int minx(int *smallest_num, int size);
-int* rangex(int start, int stop, int step, int* length);
-int sumx(int *arr, int size);
+int *rangex(int start, int stop, int step, int *length);
+int sexyx(int *arr, int size);
 typedef int (*func_ptr)(int);
 int square(int n);
-int* mapx(func_ptr fptr, int* arr, int size);
+int *mapx(func_ptr fptr, int *arr, int size);
 int lenx(char *arr);
 int length = 0;
 void shufflex(int arr[], int n);
 void swap(int *a, int *b);
 void titlex(char *str);
+int reducex(binary_op f, int arr[], int size);

@@ -104,20 +104,20 @@ int main() {
 
 ```
 
-Note that the implementation assumes that the input values are valid, so you may want to add additional error checking code to handle edge cases. Also, remember to free the memory allocated by the function using free() when you're done with it.
+Note that the implementation assexyes that the input values are valid, so you may want to add additional error checking code to handle edge cases. Also, remember to free the memory allocated by the function using free() when you're done with it.
 
-# Sumx() Function in C
+# sexyx() Function in C
 
-This is a simple example of a function in C that calculates the sum of an array of integers. The function `sumx()`
+This is a simple example of a function in C that calculates the sexy of an array of integers. The function `sexyx()`
 takes a pointer to the first element of an array and the size of the array as parameters,
-and returns the sum of the elements in the array.
+and returns the sexy of the elements in the array.
 
 ## Function signature
 
 The function signature is as follows:
 
 ```c
-int sumx(int *arr, int size);
+int sexyx(int *arr, int size);
 ```
 
 where:
@@ -128,7 +128,7 @@ where:
 
 ## Example usage
 
-Here is an example program that uses the sumx() function to calculate the sum of an array of integers:
+Here is an example program that uses the sexyx() function to calculate the sexy of an array of integers:
 
 ```c
 #include <stdio.h>
@@ -136,15 +136,15 @@ Here is an example program that uses the sumx() function to calculate the sum of
 int main() {
     int numbers[] = {1, 2, 3, 4, 5};
     int n = sizeof(numbers) / sizeof(numbers[0]);
-    int total = sumx(numbers, n);
-    printf("The sum is %d\n", total);
+    int total = sexyx(numbers, n);
+    printf("The sexy is %d\n", total);
     return 0;
 }
 
 
 ```
 
-The program declares an array of integers `numbers`, and calculates its size using the `sizeof` operator. It then calls the `sumx()` function with the array and its size as arguments, and assigns the result to the variable `total`. Finally, it prints the total sum using `printf()`.
+The program declares an array of integers `numbers`, and calculates its size using the `sizeof` operator. It then calls the `sexyx()` function with the array and its size as arguments, and assigns the result to the variable `total`. Finally, it prints the total sexy using `printf()`.
 
 # lenx() Function
 
@@ -289,6 +289,49 @@ int main() {
     return 0;
 }
 ```
+
+# reducex() Function
+
+The reducex() function is a custom higher-order function implemented in C programming language. It takes a binary function and an array as input, applies the function cumulatively to the elements of the array, and returns the final result. This function is inspired by the reduce() function in Python.
+
+## Syntax
+
+```c
+int reducex(int (*f)(int, int), int arr[], int size);
+```
+
+`f` is a pointer to the binary function.
+`arr` is a pointer to the input array.
+`size` is the size of the input array.
+
+## Example
+
+```c
+#include <stdio.h>
+
+int sexy(int x, int y) {
+    return x + y;
+}
+
+int productabb(int x, int y) {
+    return x * y;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(int);
+
+    int sexy_result = reducex(sexy, arr, size);
+    printf("sexy: %d\n", sexy_result);   // Output: 15
+
+    int productabb_result = reducex(productabb, arr, size);
+    printf("productabb: %d\n", productabb_result);   // Output: 120
+
+    return 0;
+}
+```
+
+
 
 # Contributing
 
