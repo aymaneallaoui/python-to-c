@@ -67,7 +67,7 @@ int square(int n)
     return n * n;
 }
 
-// Define a function that mimics map() in Python
+
 int *mapx(func_ptr fptr, int *arr, int size)
 {
 
